@@ -338,6 +338,173 @@ section {
 }
 
 /* ==========================================
+   TRUST STATS SECTION - Mobile First
+   ========================================== */
+.trust-stats {
+    background: var(--cream);
+    padding: 2rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* ==========================================
+   PACKAGES SECTION - Mobile First
+   ========================================== */
+.packages-section {
+    padding: 3rem 0;
+    background: var(--white);
+}
+
+.packages-section .section-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.packages-section .section-header p {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--cream-dark);
+    position: relative;
+    transition: var(--transition);
+}
+
+.package-badge {
+    position: absolute;
+    top: -10px;
+    right: 1rem;
+    background: var(--secondary);
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+}
+
+.package-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.package-features {
+    margin-bottom: 1.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--cream);
+}
+
+.feature:last-child {
+    border-bottom: none;
+}
+
+.feature svg {
+    width: 18px;
+    height: 18px;
+    color: var(--secondary);
+    flex-shrink: 0;
+}
+
+.package-card .btn {
+    width: 100%;
+}
+
+/* ==========================================
+   WHY CHOOSE US SECTION - Mobile First
+   ========================================== */
+.why-us-section {
+    padding: 3rem 0;
+    background: var(--primary-dark);
+}
+
+.why-us-section .section-header h2 {
+    color: var(--white);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.why-us-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.why-us-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.why-us-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-dark);
+}
+
+.why-us-item h3 {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.why-us-item p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
    IMAGE GALLERY - Mobile First
    ========================================== */
 .image-gallery-section {
@@ -549,6 +716,26 @@ section {
     body {
         padding-bottom: 0;
     }
+
+    /* Trust Stats - Tablet */
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2.25rem;
+    }
+
+    /* Packages - Tablet */
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Us - Tablet */
+    .why-us-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* ==========================================
@@ -748,6 +935,65 @@ section {
 
     .floating-whatsapp:hover {
         transform: scale(1.1);
+    }
+
+    /* Trust Stats - Desktop */
+    .trust-stats {
+        padding: 3rem 0;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.95rem;
+    }
+
+    /* Packages - Desktop */
+    .packages-section {
+        padding: 4rem 0;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .package-card {
+        padding: 2rem;
+    }
+
+    .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .package-card h3 {
+        font-size: 1.35rem;
+    }
+
+    /* Why Us - Desktop */
+    .why-us-section {
+        padding: 4rem 0;
+    }
+
+    .why-us-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .why-us-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .why-us-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .why-us-item p {
+        font-size: 0.9rem;
     }
 }
 
