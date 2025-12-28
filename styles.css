@@ -910,6 +910,43 @@ section {
     width: auto;
 }
 
+/* Simple Footer */
+.footer-simple {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-simple .footer-logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-contact-simple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-contact-simple a {
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+.footer-contact-simple a:hover {
+    color: var(--secondary-light);
+}
+
+.footer-contact-simple span {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-address {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
 .footer-about p {
     color: rgba(255,255,255,0.7);
     font-size: 0.95rem;
@@ -1471,6 +1508,170 @@ section {
 @media (min-width: 640px) {
     .hero-video .hero-buttons {
         flex-direction: row;
+    }
+}
+
+/* Hero Badge with Icon */
+.hero-video .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero-video .hero-badge svg {
+    width: 16px;
+    height: 16px;
+    color: var(--secondary);
+}
+
+/* Larger Buttons */
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.05rem;
+}
+
+/* Hero Stats */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.hero-stat {
+    text-align: center;
+}
+
+.hero-stat .stat-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.hero-stat .stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll Indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+.hero-scroll-indicator svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Hero Content Animation */
+.hero-content-center h1 {
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-content-center > p {
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.hero-content-center .hero-buttons {
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+@media (min-width: 768px) {
+    .hero-stat .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .hero-stats {
+        gap: 3rem;
+    }
+
+    .hero-scroll-indicator {
+        bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hero-stat-divider {
+        display: none;
+    }
+
+    .hero-stat {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    .hero-scroll-indicator {
+        display: none;
     }
 }
 
