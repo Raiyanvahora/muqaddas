@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:usmantravels.com)",
+      "Bash(dir \"C:\\\\Users\\\\Admin\\\\Desktop\\\\MUQADDAS\\\\video\" /b)",
+      "Bash(ren:*)",
+      "Bash(powershell:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
