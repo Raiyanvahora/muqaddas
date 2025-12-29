@@ -760,6 +760,10 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .image-gallery-grid .gallery-image:nth-child(5) {
+        grid-column: span 2;
+    }
+
     .cta-buttons {
         flex-direction: row;
         justify-content: center;
@@ -973,7 +977,12 @@ section {
     }
 
     .image-gallery-grid {
-        gap: 1.5rem;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .image-gallery-grid .gallery-image:nth-child(5) {
+        grid-column: span 1;
     }
 
     .gallery-image {
